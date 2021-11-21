@@ -1,38 +1,143 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: 0;
+  background-color: #f7f8fc;
+  font-family: 'Roboto', sans-serif;
+  color: #10182f;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 320px;
+}
+.card-header img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user {
   display: flex;
-  flex-direction: column;
+  margin-top: auto;
+}
+
+.user img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.user-info h5 {
+  margin: 0;
+}
+.user-info small {
+  color: #545d7a;
+}
+
+.btn {
+  display: inline-block;
+  background: teal;
+  color: #fff;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+  outline: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0.7rem 2rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  background-color: #000;
+  color: #fff;
+  height: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar ul {
+  display: flex;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a {
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+.navbar .welcome span {
+  margin-right: 0.6rem;
+}
+
+/* Search */
+
+form {
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.pseudo-search {
+  display: inline;
+  border: 2px solid #ccc;
+  border-radius: 100px;
+  padding: 10px 15px;
+}
+
+.pseudo-search input {
+  border: 0;
+  background-color: transparent;
+  width: 200px;
+}
+
+.pseudo-search button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.pseudo-search input:focus {
+  outline: none;
 }
